@@ -1,0 +1,361 @@
+{
+  "users": [
+    {
+      "name": "demo",
+      "email": "demo@demo",
+      "password": "demo",
+      "id": "1",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "11@1.ru",
+      "password": "111",
+      "id": "i1ob9ykkkpw3djw",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111@1.ru",
+      "password": "111",
+      "id": "i1ob550kkpwow0a",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "11111@1.ru",
+      "password": "11",
+      "id": "i1obhwwkkpwqyvc",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111111@1.ru",
+      "password": "1111",
+      "id": "i1obi2kkkpwvfjk",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "1111111@1.ru",
+      "password": "1111",
+      "id": "i1obey4kkpwvki9",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111111111@1.ru",
+      "password": "111",
+      "id": "i1ob80skkpwy0qw",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111211@1.ru",
+      "password": "111",
+      "id": "i1obe9skkpxb435",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "1111113111@1.ru",
+      "password": "111",
+      "id": "i1obfdkkkpxghp4",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111311@1.ru",
+      "password": "111",
+      "id": "i1obcu8kkpxiee7",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111114@1.ru",
+      "password": "22",
+      "id": "i1ob3vckkpxlb39",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "111141@1.ru",
+      "password": "11",
+      "id": "i1ob198kkqkul1v",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "119111@1.ru",
+      "password": "1",
+      "id": "i1ob4gkkkqkvp3k",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "113111@1.ru",
+      "password": "11",
+      "id": "i1ob68skkqlbv12",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "131111@1.ru",
+      "password": "1",
+      "id": "i1obd98kkqlms12",
+      "isAuthorized": false
+    },
+    {
+      "name": "1111",
+      "email": "1111331@1.ru",
+      "password": "1",
+      "id": "i1ob3zgkkqlrf55",
+      "isAuthorized": true
+    },
+    {
+      "name": "11111",
+      "email": "111121@1.ru",
+      "password": "1",
+      "id": "i1obh70kkqlu461",
+      "isAuthorized": true
+    },
+    {
+      "name": "6",
+      "email": "111131@1.ru",
+      "password": "2",
+      "id": "i1ob90kkqmd9oz",
+      "isAuthorized": true
+    },
+    {
+      "name": "6",
+      "email": "1111231@1.ru",
+      "password": "2",
+      "id": "i1obj2wkkqmdt8m",
+      "isAuthorized": true
+    },
+    {
+      "name": "6",
+      "email": "1111q231@1.ru",
+      "password": "2",
+      "id": "i1ob5h4kkqmeidi",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "1111100@1.ru",
+      "password": "111",
+      "id": "i1obi44kkqmk4ju",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "11111g00@1.ru",
+      "password": "111",
+      "id": "i1obflgkkqmkm2f",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "11111g0ii0@1.ru",
+      "password": "111",
+      "id": "i1obj2skkqml9t1",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111w",
+      "email": "tt111g0ii0@1.ru",
+      "password": "111",
+      "id": "i1obf44kkqmmc44",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "211@1.ru",
+      "password": "`",
+      "id": "i1obj10kkqmndap",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "1111l1@1.ru1",
+      "password": "11",
+      "id": "i1obaf0kkqmuk7n",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "1111k1@1.ru",
+      "password": "1",
+      "id": "i1obeackkqmwgl5",
+      "isAuthorized": true
+    },
+    {
+      "name": "1111",
+      "email": "1111t1@1.ru",
+      "password": "rr",
+      "id": "i1ob53wkkqn1378",
+      "isAuthorized": true
+    },
+    {
+      "name": "5",
+      "email": "111e311@1.ru",
+      "password": "111",
+      "id": "i1ob4fokkqn2wmb",
+      "isAuthorized": true
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Банк",
+      "user_id": "1",
+      "id": "1"
+    },
+    {
+      "name": "Магазин",
+      "user_id": "1",
+      "id": "2"
+    },
+    {
+      "name": "Бизнес",
+      "user_id": "1",
+      "id": "3"
+    }
+  ],
+  "transactions": [
+    {
+      "account_id": "1",
+      "created_at": "2019-09-15 10:24:02",
+      "id": "1",
+      "name": "Кредит",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-17 15:53:02",
+      "id": "2",
+      "name": "Баланс на дебетовке",
+      "sum": 3200,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-19 20:12:02",
+      "id": "3",
+      "name": "Копилка",
+      "sum": 1500,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 16:23:02",
+      "id": "4",
+      "name": "Молочные продукты",
+      "sum": 100,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "5",
+      "name": "Фрукты",
+      "sum": 250,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "17",
+      "name": "Овощи",
+      "sum": 300,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 14:47:02",
+      "id": "6",
+      "name": "Мясо",
+      "sum": 600,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-27 13:27:02",
+      "id": "7",
+      "name": "Долг в банк",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "9",
+      "name": "На банду",
+      "sum": 15000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-17 13:27:02",
+      "id": "10",
+      "name": "На стволы",
+      "sum": 6000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-12-27 13:27:02",
+      "id": "11",
+      "name": "Прибыль с банка",
+      "sum": 1500000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "12",
+      "name": "Прибыль с магазина",
+      "sum": 300000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "13",
+      "name": "Подарок сизого",
+      "sum": 20000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-15 13:27:02",
+      "id": "14",
+      "name": "На охрану",
+      "sum": 60000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "15",
+      "name": "На бумер",
+      "sum": 300000,
+      "type": "expense",
+      "user_id": "1"
+    }
+  ]
+}

@@ -13,15 +13,22 @@ class AsyncForm {
    * через registerEvents()
    * */
   constructor( element ) {
-
+        
+    if(!element){
+      throw new error('Переданный элемент не существует!');
+    }
+    this.elementForm = element;
+    this.registerEvents();
   }
-
   /**
    * Необходимо запретить отправку формы. В момент отправки
    * вызывает метод submit()
    * */
   registerEvents() {
-
+    this.elementForm.addEventListener('submit',(e) =>{
+      e.preventDefault();
+      this.submit();
+    })    
   }
 
   /**
@@ -32,10 +39,22 @@ class AsyncForm {
    * }
    * */
   getData() {
-
+ const inputData = [... this.elementForm.querySelectorAll('input')];
+ console.log(inputData);
+//     inputData.forEach((current) => {
+//       let dataObject = {};
+//       dataObject[current.name] = current.value;
+//       return dataObject;
+//     },{}); 
+//   }
+    return  inputData.reduce((previous,key) =>{
+      previous[key.name] = key.value;
+      return previous;
+    },{});
   }
 
   onSubmit( options ) {
+
 
   }
 
@@ -44,6 +63,10 @@ class AsyncForm {
    * данные, полученные из метода getData()
    * */
   submit() {
+    const nameForm = this.elementForm.closest('.modal').dataset.modalId;
+    const data = App.getForm(nameForm).getData();
+    this.onSubmit(data, nameForm);
 
   }
 }
+
