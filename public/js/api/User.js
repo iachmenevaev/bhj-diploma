@@ -4,7 +4,7 @@
  * Имеет свойство URL, равное '/user'.
  * */
 class User {
-  static url ='/user';
+  static URL ='/user';
   /**
    * Устанавливает текущего пользователя в
    * локальном хранилище.
@@ -73,16 +73,37 @@ class User {
    * сохранить пользователя через метод
    * User.setCurrent.
    * */
-  static async register( data, callback = f => f ) {
-    return await createRequest({
-      data,
-      url: User.url + '/register',
+  // static  register( data, callback = f => f ) {
+  //   return createRequest({
+  //     data, 
+  //     url: this.URL + '/register',
+  //     method: 'POST',
+  //     responseType: 'json',
+  //     callback: (err,responce) =>{
+  //       if(responce && response.user){
+  //         this.setCurrent(response.user);
+  //       }
+  //       callback.call(this,err,responce);
+  //       }
+  //   });
+  // }
+  static  register( data, callback = f => f ) {
+    return  createRequest({
+      
+      url: this.URL + '/register',
       method: 'POST',
       responseType: 'json',
-      callback: callback,
+      data,
+      callback: (error,responce) =>{
+       
+              if(responce && response.user){
+                this.setCurrent(response.user);
+              }
+              callback(error,responce);
+              }
     });
+    console.log(responce);
   }
-
   /**
    * Производит выход из приложения. После успешного
    * выхода необходимо вызвать метод User.unsetCurrent
