@@ -9,11 +9,7 @@ class User {
    * Устанавливает текущего пользователя в
    * локальном хранилище.
    * */
-  // static setCurrent(user) {
-  //   const {name,id} = User.user;
-  //   localStorage.setItem('user',JSON.stringify({name,id}));
 
-  // }
   static setCurrent(user) {
     if (!user.success) {
       alert(user.error);

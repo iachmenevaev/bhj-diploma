@@ -19,6 +19,7 @@ try {
     xhr.open( options.method, requestURL );
     xhr.addEventListener('load', () => {
       const response = xhr.responseText;
+      options.callback(response);
       console.log(response);
       return response;
     
