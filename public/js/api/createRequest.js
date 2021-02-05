@@ -3,13 +3,13 @@
  * на сервер.
  * */
 const createRequest =  (options = {}) => {
+
     if(!options.data){
         return;
     }
     const f = function () {},
     {
         method = 'GET',
-        callback = f,
         responseType,
         async = true,
         data = {}
@@ -27,16 +27,17 @@ const createRequest =  (options = {}) => {
         xhr.open( options.method, requestURL );
         xhr.addEventListener('readystatechange', () => {
             if (this.readyState === xhr.DONE && xhr.status === 200)
-               options.callback(xhr.response.error, xhr.response);
-                console.log(xhr.response); 
-        });
+          
+             callback(xhr.response.error, xhr.response);
+             });
     xhr.send(options.method === 'GET' ? null : formData);
+    console.log(options);
   }
+
   catch (err) {
     console.log(err);
   }
 }
-  
 function searchParams(arrdata){
     let symbol = '?';
     return symbol + Object.entries(arrdata).map(([key,value]) => `${key} = ${value}`).join('&');

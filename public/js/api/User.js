@@ -57,14 +57,21 @@ class User {
    * сохранить пользователя через метод
    * User.setCurrent.
    * */
-  static async login( data, callback = f => f ) {
-    return await createRequest({
-      data,
-      url: User.url + '/login',
+  static  login( data, callback = f => f ) {
+    return  createRequest({
+      url: this.URL + '/login',
       method: 'POST',
       responseType: 'json',
-      callback: callback,
-    });
+      data,
+       callback:
+        (err,responce) => {
+               if(responce && response.user){
+                this.setCurrent(response.user);
+              }
+              callback(err,responce);
+            }
+    })
+    
   }
 
   /**
@@ -87,33 +94,40 @@ class User {
   //       }
   //   });
   // }
-  static  register( data, callback = f => f ) {
-    return  createRequest({
+  static   register(data, callback = f => f ) {
+    return   createRequest({
       
       url: this.URL + '/register',
       method: 'POST',
       responseType: 'json',
       data,
-      callback: (error,responce) =>{
+      callback: (err,responce) => {
        
               if(responce && response.user){
                 this.setCurrent(response.user);
               }
-              callback(error,responce);
+              callback.call(err,responce);
               }
     });
-    console.log(responce);
+    
   }
   /**
    * Производит выход из приложения. После успешного
    * выхода необходимо вызвать метод User.unsetCurrent
    * */
-  static async logout( data, callback = f => f ) {
-    return await createRequest({
-      data,
-      url: User.url + '/logout',
+  static  logout( data, callback = f => f ) {
+    return  createRequest({
+      url: this.URL + '/logout',
       method: 'POST',
-      callback: callback,
+      responseType: 'json',
+      data,
+      // callback: (error,responce) =>{
+       
+      //         if(responce ){
+      //           this.unsetCurrent;
+      //         }
+      //         callback(error,responce);
+      //         }
     });
-  }
+}
 }

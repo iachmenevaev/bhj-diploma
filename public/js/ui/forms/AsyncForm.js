@@ -40,7 +40,6 @@ class AsyncForm {
    * */
   getData() {
  const inputData = [... this.elementForm.querySelectorAll('input')];
- console.log(inputData);
 //     inputData.forEach((current) => {
 //       let dataObject = {};
 //       dataObject[current.name] = current.value;
@@ -65,7 +64,7 @@ class AsyncForm {
   submit() {
     const nameForm = this.elementForm.closest('.modal').dataset.modalId;
     const data = App.getForm(nameForm).getData();
-    this.onSubmit(data, nameForm);
+    this.onSubmit(data,nameForm);
 
   }
 }
