@@ -58,21 +58,32 @@ class User {
    * User.setCurrent.
    * */
   static  login( data, callback = f => f ) {
-    return  createRequest({
+    createRequest({
       url: this.URL + '/login',
       method: 'POST',
       responseType: 'json',
       data,
-       callback:
-        (err,responce) => {
-               if(responce && response.user){
-                this.setCurrent(response.user);
-              }
-              callback(err,responce);
-            }
-    })
-    
+      callback: (err, response) => {
+        if (response && response.user) {
+          this.setCurrent(response.user);
+        }
+        callback(err, response);
+      }
+    });
   }
+  //   return  createRequest({
+  //     url: this.URL + '/login',
+  //     method: 'POST',
+  //     responseType: 'json',
+  //     data,
+  //     callback: (err,responce) => {
+  //              if (responce && response.user){
+  //               this.setCurrent(response.user);
+  //             }
+  //             callback(err,responce);
+  //             }
+  //   });
+  // }
 
   /**
    * Производит попытку регистрации пользователя.

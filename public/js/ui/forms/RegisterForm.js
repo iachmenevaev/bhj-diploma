@@ -13,7 +13,7 @@ class RegisterForm extends AsyncForm{
   onSubmit(options){
  
     User.register(options,(err,response) =>{
-       console.log(response);
+       console.log(response.user);
       // if(responce && response.user){
       //   this.setCurrent(response.user);
       //   const nearWindow = this.elementForm.closest('.modal');

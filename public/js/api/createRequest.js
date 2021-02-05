@@ -7,13 +7,7 @@ const createRequest =  (options = {}) => {
     if(!options.data){
         return;
     }
-    const f = function () {},
-    {
-        method = 'GET',
-        responseType,
-        async = true,
-        data = {}
-    } = options,
+ 
     xhr = new XMLHttpRequest;
     let requestURL = options.url;
     const formData = new FormData;
@@ -25,15 +19,21 @@ const createRequest =  (options = {}) => {
     }
     try {
         xhr.open( options.method, requestURL );
-        xhr.addEventListener('readystatechange', () => {
-            if (this.readyState === xhr.DONE && xhr.status === 200)
-          
-             callback(xhr.response.error, xhr.response);
-             });
-    xhr.send(options.method === 'GET' ? null : formData);
-    console.log(options);
+                
+        xhr.addEventListener('readystatechange', function ()  {
+    if (this.readyState === xhr.DONE && xhr.status === 200){
+      
+      options.callback(null,xhr.response);
+            }
+          });
+        // xhr.addEventListener('load',() => {
+        //   let response = xhr.responseTex;
+        //   options.callback(null,response);
+        // });
+        
+         xhr.send(options.method === 'GET' ? null : formData);
+         
   }
-
   catch (err) {
     console.log(err);
   }
