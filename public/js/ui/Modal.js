@@ -13,8 +13,6 @@ class Modal {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
-    
     if(!element){
       throw new error('Переданный элемент не существует!');
     }

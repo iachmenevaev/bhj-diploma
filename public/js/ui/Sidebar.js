@@ -50,9 +50,15 @@ class Sidebar {
     modalWindow.open();
   })
   logoutBtn.addEventListener('click',(e) => {
-    User.logout(User.current(), User.unsetCurrent);
-    // User.logout(User.current(),User.unsetCurrent)
-    //дописать App.setState('init');
-  })
+    console.log(User.current());
+    
+    User.logout(User.current(),(err,response)=>{
+      if (response){
+        console.log(response);
+        User.unsetCurrent();
+        App.setState( 'init' );
+      }
+    });
+  })   
  }
 }

@@ -24,7 +24,7 @@ class User {
    * */
   static unsetCurrent() {
     localStorage.removeItem('user');
-    App.setState('init');
+    // App.setState('init');
   }
 
   /**
@@ -37,20 +37,24 @@ class User {
     }
       return JSON.parse(localStorage.getItem('user'));
   }
-
   /**
    * Получает информацию о текущем
    * авторизованном пользователе.
    * */
-  static async fetch(data, callback = f => f) {
-    return await createRequest({
+  static  fetch(data, callback = f => f) {
+     createRequest({
       data,
       url: User.url + '/current',
       method: 'GET',
       responseType: 'json',
-      callback: callback,
+      callback:(err, response) => {
+        if (response && response.user) {
+          User.setCurrent( response.user );
+        }
+        callback(err, response);
+      }
     });
-  }
+   }
   /**
    * Производит попытку авторизации.
    * После успешной авторизации необходимо
@@ -65,25 +69,13 @@ class User {
       data,
       callback: (err, response) => {
         if (response && response.user) {
-          this.setCurrent(response.user);
+          User.setCurrent(response);
         }
         callback(err, response);
       }
     });
   }
-  //   return  createRequest({
-  //     url: this.URL + '/login',
-  //     method: 'POST',
-  //     responseType: 'json',
-  //     data,
-  //     callback: (err,responce) => {
-  //              if (responce && response.user){
-  //               this.setCurrent(response.user);
-  //             }
-  //             callback(err,responce);
-  //             }
-  //   });
-  // }
+
 
   /**
    * Производит попытку регистрации пользователя.
@@ -91,36 +83,19 @@ class User {
    * сохранить пользователя через метод
    * User.setCurrent.
    * */
-  // static  register( data, callback = f => f ) {
-  //   return createRequest({
-  //     data, 
-  //     url: this.URL + '/register',
-  //     method: 'POST',
-  //     responseType: 'json',
-  //     callback: (err,responce) =>{
-  //       if(responce && response.user){
-  //         this.setCurrent(response.user);
-  //       }
-  //       callback.call(this,err,responce);
-  //       }
-  //   });
-  // }
   static   register(data, callback = f => f ) {
-    return   createRequest({
-      
+  createRequest({
       url: this.URL + '/register',
       method: 'POST',
       responseType: 'json',
       data,
-      callback: (err,responce) => {
-       
-              if(responce && response.user){
-                this.setCurrent(response.user);
-              }
-              callback.call(err,responce);
-              }
+      callback: (err, response) => {
+        if (response && response.user) {
+          User.setCurrent(response);
+        }
+        callback(err, response);
+      }
     });
-    
   }
   /**
    * Производит выход из приложения. После успешного
@@ -132,13 +107,7 @@ class User {
       method: 'POST',
       responseType: 'json',
       data,
-      // callback: (error,responce) =>{
-       
-      //         if(responce ){
-      //           this.unsetCurrent;
-      //         }
-      //         callback(error,responce);
-      //         }
-    });
-}
+      callback,
+    })
+  }
 }

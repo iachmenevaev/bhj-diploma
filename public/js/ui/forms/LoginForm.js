@@ -1,8 +1,8 @@
-/**
- * Класс LoginForm управляет формой
- * входа в портал
- * Наследуется от AsyncForm
- * */
+// /**
+//  * Класс LoginForm управляет формой
+//  * входа в портал
+//  * Наследуется от AsyncForm
+//  * */
 class LoginForm extends AsyncForm {
   /**
    * Производит авторизацию с помощью User.login
@@ -11,17 +11,16 @@ class LoginForm extends AsyncForm {
    * закрывает окно, в котором находится форма
    * */
    onSubmit(data) {
-     console.log(data);
     User.login(data,(err,response) => {
-      response = JSON.parse(response);
-      console.log (response.success);
-    console.log(typeof(response)) });
-    // const nearWindow = this.elementForm.closest('.modal');
-    // const currentForm = App.getForm(nearWindow.dataset.modalId);
-    // const currentModal = App.getModal(nearWindow.dataset.modalId);
-    // currentForm.elementForm.reset();
-    // currentModal.close();
-    // App.setState('user-logged');
-   
-   }
+    if(response.success){
+     User.setCurrent(response);
+    const nearWindow = this.element.closest('.modal');
+    const currentForm = App.getForm(nearWindow.dataset.modalId);
+    const currentModal = App.getModal(nearWindow.dataset.modalId);
+    currentForm.element.reset();
+    App.setState('user-logged');
+    currentModal.close();
+    }   
+   })
+ }
 }
